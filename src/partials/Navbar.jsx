@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -7,10 +8,12 @@ const Navbar = () => {
         <div className=" w-full flex my-auto gap-3 justify-start items-start text-start py-4 ">
           <div className="nav-left flex flex-col gap-3 lg:flex-row">
             <div className="nav-logo">
-              <img
-                className=" !w-36 lg:!w-24  "
-                src="/delhiBookStore-logo.png"
-              />
+              <Link to="/">
+                <img
+                  className=" !w-36 lg:!w-24  "
+                  src="/delhiBookStore-logo.png"
+                />
+              </Link>
             </div>
             <div className="location lg:flex hidden">
               <p className="top-text">Deliver to</p>
@@ -25,7 +28,7 @@ const Navbar = () => {
               <div className="relative inline-block">
                 <select
                   defaultValue="All"
-                  className="bg-gray-200 text-[#28416c] search-dropdown w-28 lg:w-16 text-lg lg:text-[0.8rem] pl-3 pr-8 py-[0.4rem]   appearance-none focus:outline-none"
+                  className="bg-gray-200 text-[#28416c] search-dropdown w-20 lg:w-16 text-lg lg:text-[0.8rem] pl-3 pr-8 py-[0.4rem]   appearance-none focus:outline-none"
                 >
                   <option className="h-12">All</option>
                   <option className="h-12">All Departments</option>
@@ -40,10 +43,10 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search Delhi Book Store"
-              className="search-box w-full px-4 py-2 border-2  text-black text-lg lg:text-sm  focus:outline-none"
+              className="search-box w-full px-4 py-[0.4rem] sm:py-[0.6rem]  text-black text-lg lg:text-sm  focus:outline-none"
             />
-            <div className="search-icon flex justify-center items-center text-center h-full w-16">
-              <i className="text-3xl lg:text-xl w-full fa-solid fa-magnifying-glass text-[#28416c] flex justify-center"></i>
+            <div className="py-[0.7rem] sm:py-0  search-icon flex justify-center items-center text-center h-full w-16">
+              <i className="text-[1.5rem] sm:pt-2 sm:text-3xl lg:text-xl w-full fa-solid fa-magnifying-glass text-[#28416c] flex justify-center rounded-tl-none rounded-bl-none rounded-tr-[0.3rem] rounded-br-[0.3rem]"></i>
             </div>
           </div>
         </div>

@@ -19,6 +19,7 @@ import {
 
 import { Link } from "react-router-dom";
 import categoryService from "../services/category.service";
+import LeftSidebar from "../components/LeftSidebar";
 
 const HomePage = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -44,140 +45,9 @@ const HomePage = () => {
 
   return (
     <div className=" w-full h-full grid grid-cols-12">
-      <div className=" lg:flex flex-col hidden col-span-2  pl-2  border-r border-solid h-full  ">
-        <div className=" pl-3 text-balance font-normal">
-          <ul>
-            <li>
-              <div className="flex flex-col pt-5">
-                {/* Checkbox container */}
-                <div className="flex items-center space-x-2">
-                  <label
-                    htmlFor="book-checkbox"
-                    className="text-md font-medium text-gray-700 cursor-pointer"
-                  >
-                    Books
-                  </label>
-                </div>
-
-                {/* Dropdown menu */}
-
-                <div className="mt-2 bg-white">
-                  <h3 className="text-sm pl-4 pt-1 font-semibold text-gray-800 mb-2">
-                    Categories
-                  </h3>
-                  <ul className="pl-7 pt-2 space-y-2 text-[0.8rem]">
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Action & Adventure
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Arts, Film & Photography
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Biographies, Diaries & True Accounts
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Business & Economics
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Children's Books
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Comics & Mangas
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Computers & Internet
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Crafts, Hobbies & Home
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Crime, Thriller & Mystery
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Engineering
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Exam Preparation
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Science Fiction & Fantasy
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Health, Fitness & Nutrition
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Health, Family & Personal Development
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Historical Fiction
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      History
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Humour
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Language, Linguistics & Writing
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Law
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Literature & Fiction
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Maps & Atlases
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Medicine & Health Sciences Textbooks
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Politics
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Reference
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Religion & Spirituality
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Romance
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      School Books
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Science & Mathematics Textbooks
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Sciences, Technology & Medicine
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Society & Social Sciences
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Sports
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Higher Education Textbooks
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Teen & Young Adult
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Textbooks & Study Guides
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      Travel & Tourism
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+      {/* {left side bar menu} */}
+      <LeftSidebar />
+      {/* {left side bar menu} */}
       <div className=" col-span-12 lg:col-span-10  px-5 pb-4 ">
         {/* <Carousel /> */}
         <div className=" flex flex-col py-4 ">
