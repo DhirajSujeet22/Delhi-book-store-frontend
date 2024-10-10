@@ -1,10 +1,10 @@
 import React from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-// import "swiper/swiper-bundle.min.css"; 
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+// import "swiper/swiper-bundle.min.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 const ImageRowSection = () => {
   // Array of objects containing image URLs and names
   const items = [
@@ -53,15 +53,14 @@ const ImageRowSection = () => {
   return (
     <section className="w-full py-8 px-4">
       <Swiper
-        modules={[Navigation,Autoplay, Pagination]}
+        modules={[Navigation, Autoplay]}
         spaceBetween={15}
         slidesPerView={7} // Default number of slides visible
         navigation
         autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-        pagination={{ clickable: true }}
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         breakpoints={{
           // Responsiveness for different screen sizes
           320: { slidesPerView: 1 }, // 1 slide on small devices
@@ -93,4 +92,3 @@ const ImageRowSection = () => {
 };
 
 export default ImageRowSection;
-

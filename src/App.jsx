@@ -6,6 +6,7 @@ import Layout from "./layout/Layout";
 import Homepage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import CategoryPage from "./pages/CategoryPage";
+import PageUp from "./components/common/PageUp";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,9 +15,25 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <PageUp />
+                <Homepage />
+              </>
+            }
+          />
           {/* <Route path="/category/:id" element={<ProductPage />} /> */}
-          <Route path="/categories/*" element={<CategoryPage />} />
+          <Route
+            path="/categories/*"
+            element={
+              <>
+                <PageUp />
+                <CategoryPage />
+              </>
+            }
+          />
         </Routes>
       </Layout>
     </Router>
