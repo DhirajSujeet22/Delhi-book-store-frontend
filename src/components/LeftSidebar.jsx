@@ -5,6 +5,65 @@ const LeftSidebar = () => {
   return (
     <>
       <div className=" lg:flex flex-col hidden col-span-2  pl-2  border-r border-solid h-full  ">
+        <div className="p-4">
+          <h2 className=" font-semibold mb-1">New Arrival</h2>
+          <ul className="list-none text-[15px]">
+            <li className="block">
+              <a href="#" className="text-black  hover:text-red-500">
+                Last 30 Days
+              </a>
+            </li>
+            <li className="block">
+              <a href="#" className="text-black  hover:text-red-500">
+                Last 60 Days
+              </a>
+            </li>
+            <li className="block">
+              <a href="#" className="text-black  hover:text-red-500">
+                Next 90 Days
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="p-2">
+  <h2 className="font-semibold mb-1">Indian Languages</h2>
+  <ul className="list-none text-[15px]">
+    <li className="flex items-center mb-2">
+      <input type="checkbox" className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded" />
+      <a href="#" className="text-black hover:text-red-500">
+        English
+      </a>
+    </li>
+    <li className="flex items-center mb-2">
+      <input type="checkbox" className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded" />
+      <a href="#" className="text-black hover:text-red-500">
+        Hindi
+      </a>
+    </li>
+    <li className="flex items-center mb-2">
+      <input type="checkbox" className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded" />
+      <a href="#" className="text-black hover:text-red-500">
+        Marathi
+      </a>
+    </li>
+    <li className="flex items-center mb-2">
+      <input type="checkbox" className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded" />
+      <a href="#" className="text-black hover:text-red-500">
+        Tamil
+      </a>
+      
+    </li>
+    <li className="flex items-center mb-2">
+      <input type="checkbox" className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded" />
+      <a href="#" className="text-black hover:text-red-500">
+       Telugu
+      </a>
+    </li>
+  </ul>
+</div>
+
+
         <div className=" pl-3 text-balance font-normal">
           <ul>
             <li>
@@ -13,7 +72,7 @@ const LeftSidebar = () => {
                 <div className="flex items-center space-x-2">
                   <label
                     htmlFor="book-checkbox"
-                    className="text-md font-medium text-gray-700 cursor-pointer"
+                    className="text-md font-semibold text-black cursor-pointer"
                   >
                     Books
                   </label>
@@ -22,10 +81,10 @@ const LeftSidebar = () => {
                 {/* Dropdown menu */}
 
                 <div className="mt-2 bg-white">
-                  <h3 className="text-sm pl-4 pt-1 font-semibold text-gray-800 mb-2">
+                  <h3 className="text-sm pl-2 pt-1 font-semibold text-gray-800 mb-2">
                     Categories
                   </h3>
-                  <ul className="pl-7 pt-2 space-y-2 text-[0.8rem]">
+                  <ul className="pl-7 pt-2 space-y-2 text-[15px]">
                     <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
                       <Link to="/categories/action-adventure">
                         Action & Adventure

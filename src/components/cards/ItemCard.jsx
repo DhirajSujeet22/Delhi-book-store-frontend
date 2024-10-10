@@ -44,4 +44,7 @@ const ItemCard = ({ title, image }) => {
   );
 };
 
+
+
+
 export default ItemCard;
