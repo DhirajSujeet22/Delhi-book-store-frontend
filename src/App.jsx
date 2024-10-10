@@ -24,7 +24,7 @@ function App() {
               </>
             }
           />
-          {/* <Route path="/category/:id" element={<ProductPage />} /> */}
+
           <Route
             path="/categories/*"
             element={
