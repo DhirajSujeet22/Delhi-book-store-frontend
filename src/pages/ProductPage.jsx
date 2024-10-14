@@ -5,7 +5,6 @@ import SubCategorySwiper from "../components/swiper/SubCategorySwiper";
 import categoryService from "../services/category.service";
 import productService from "../services/product.service";
 import ItemCard from "../components/cards/ItemCard";
-import InfiniteScroll from "react-infinite-scroll-component";
 import Pagination from "../components/Pagination";
 import SidebarCategory from "../components/category/SidebarCategory";
 
@@ -157,23 +156,7 @@ const ProductPage = () => {
         )}
 
         {!productsLoading && (
-          // <InfiniteScroll
-          //   className=" my-4 grid grid-cols-10 gap-5 col-span-12 lg:col-span-12 "
-          //   dataLength={products.length}
-          //   next={fetchMoreProducts}
-          //   hasMore={true}
-          //   loader={<h4>Loading...</h4>}
-          // >
-          //   {products.map((pro, index) => (
-          //     <div key={index} className=" w-full col-span-2 ">
-          //       {" "}
-          //       <ItemCard
-          //         title={pro.products_name}
-          //         image={`https://covers.openlibrary.org/b/isbn/${pro.products_code}-L.jpg`}
-          //       />
-          //     </div>
-          //   ))}
-          // </InfiniteScroll>
+    
           <div className=" my-4 grid grid-cols-10 gap-5 col-span-12 lg:col-span-12 ">
             {products.map((pro, index) => (
               <div key={index} className=" w-full col-span-2 ">

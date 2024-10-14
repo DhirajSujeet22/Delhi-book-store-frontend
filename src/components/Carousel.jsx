@@ -17,17 +17,14 @@ export const PromotionCarousel = () => {
     <div className="w-full group h-full relative bg-custom-gradient px-4 py-4">
       <Swiper
         autoplay={{
-          delay: 1000, // Time in ms between slide changes
+          delay: 2000, // Time in ms between slide changes
         }}
         pagination={{ clickable: true }}
-        effect="fade" // Optional: use fade effect instead of sliding
+        // effect="fade" // Optional: use fade effect instead of sliding
         loop={true}
-        speed={0} // Set speed to 0 for no sliding effect
+        // speed={0} // Set speed to 0 for no sliding effect
         className="w-full h-full mySwiper"
-        // navigation={{
-        //   prevEl: ".swiper-button-prev",
-        //   nextEl: ".swiper-button-next",
-        // }}
+
         modules={[Autoplay, Pagination, Navigation]}
       >
         <SwiperSlide>
@@ -53,12 +50,7 @@ export const PromotionCarousel = () => {
         </SwiperSlide>
         {/* Add more slides as needed */}
       </Swiper>
-      {/* <div className="swiper-button-prev custom-button text-slate-500 h-12 w-12 -left-2 opacity-0 transition-opacity duration-300 hover:opacity-100">
-        <CiSquareChevLeft />
-      </div>
-      <div className="swiper-button-next custom-button text-slate-500 h-12 w-12 -right-2 opacity-0 transition-opacity duration-300 hover:opacity-100">
-        <CiSquareChevRight />
-      </div> */}
+  
     </div>
   );
 };
@@ -123,17 +115,14 @@ export const AcademicCarousel = () => {
     <div className="w-full group h-full relative bg-custom-gradient">
       <Swiper
         autoplay={{
-          delay: 1000, // Time in ms between slide changes
+          delay: 2000, // Time in ms between slide changes
+          disableOnInteraction: false,
         }}
         pagination={{ clickable: true }}
-        effect="fade" // Optional: use fade effect instead of sliding
-        loop={true}
-        speed={0} // Set speed to 0 for no sliding effect
+        // effect="fade" // Optional: use fade effect instead of sliding
+        // loop={true}
+        // speed={0} // Set speed to 0 for no sliding effect
         className="w-full h-full mySwiper"
-        // navigation={{
-        //   prevEl: ".swiper-button-prev",
-        //   nextEl: ".swiper-button-next",
-        // }}
         modules={[Autoplay, Pagination, Navigation]}
       >
         <SwiperSlide>
@@ -180,12 +169,6 @@ export const AcademicCarousel = () => {
         </SwiperSlide>
         {/* Add more slides as needed */}
       </Swiper>
-      {/* <div className="swiper-button-prev custom-button text-slate-500 h-12 w-12 -left-2 opacity-0 transition-opacity duration-300 hover:opacity-100">
-        <CiSquareChevLeft />
-      </div>
-      <div className="swiper-button-next custom-button text-slate-500 h-12 w-12 -right-2 opacity-0 transition-opacity duration-300 hover:opacity-100">
-        <CiSquareChevRight />
-      </div> */}
     </div>
   );
 };

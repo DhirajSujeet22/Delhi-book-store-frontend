@@ -147,8 +147,8 @@ const CategoryPage = () => {
       id: 1,
       image:
         "https://m.media-amazon.com/images/I/71Zb3XmVHML._AC_UL480_QL65_.jpg",
-      title: "Book One",
-      author: "Author One",
+      title: "Sword of Destiny (Reissue)",
+      author: "Andrzej Sapkowski",
       rating: 4.5,
     },
     {
@@ -182,7 +182,7 @@ const CategoryPage = () => {
           {/* Highly Rated Section */}
           <div>
             <div className="flex justify-between items-center mb-4 ml-5">
-              <h2 className="text-2xl font-semibold">Highly Rated </h2>
+              <h2 className="text-2xl font-semibold">Highly Rated</h2>
               <a href="#!" className="text-blue-500 font-bold hover:underline">
                 See More
               </a>
@@ -191,18 +191,40 @@ const CategoryPage = () => {
               {highlyRatedBooks.map((book) => (
                 <div
                   key={book.id}
-                  className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-between h-72"
+                  className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-between h-[24rem]"
                 >
-                  <img
-                    src={book.image}
-                    alt={book.title}
-                    className="h-40 w-32 object-cover mb-3"
-                  />
-                  <h3 className="text-lg">{book.title}</h3>
-                  <p className="text-gray-500 text-center">by {book.author}</p>
-                  <p className="text-yellow-500 font-bold mt-auto">
-                    ⭐ {book.rating}
-                  </p>
+                  <div className="mb-3">
+                    <img
+                      src={book.image}
+                      alt={book.title}
+                      className="h-52 w-42 object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-col items-start w-full ">
+                    <h3 className="text-lg">{book.title}</h3>
+                    <p className="text-gray-500">by {book.author}</p>
+                    <div className="flex mt-auto">
+                      {Array.from(
+                        { length: Math.round(book.rating) },
+                        (_, index) => (
+                          <span key={index} className="text-yellow-500">
+                            ⭐
+                          </span>
+                        )
+                      )}
+                    </div>
+                    <h1 className="mt-2 text-lg text-left">
+                      {/* Increase the size of ₹465 */}
+                      <span className="text-black font-semibold">₹465</span>
+                      &nbsp;
+                      <span className="text-gray-500 text-sm">M.R.P</span>&nbsp;
+                      <span className="line-through text-gray-500 text-sm">
+                        ₹688
+                      </span>
+                      &nbsp;
+                      <span className="text-black text-sm">(34% Off)</span>
+                    </h1>
+                  </div>
                 </div>
               ))}
             </div>
@@ -220,18 +242,40 @@ const CategoryPage = () => {
               {mostWishedForBooks.map((book) => (
                 <div
                   key={book.id}
-                  className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-between h-72"
+                  className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-between h-[24rem]"
                 >
-                  <img
-                    src={book.image}
-                    alt={book.title}
-                    className="h-40 w-38 object-cover mb-3"
-                  />
-                  <h3 className="text-lg">{book.title}</h3>
-                  <p className="text-gray-500 ">by {book.author}</p>
-                  <p className="text-yellow-500 font-bold mt-auto">
-                    ⭐ {book.rating}
-                  </p>
+                  <div className="mb-3">
+                    <img
+                      src={book.image}
+                      alt={book.title}
+                      className="h-52 w-42 object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-col items-start w-full ">
+                    <h3 className="text-lg">{book.title}</h3>
+                    <p className="text-gray-500">by {book.author}</p>
+                    <div className="flex mt-auto">
+                      {Array.from(
+                        { length: Math.round(book.rating) },
+                        (_, index) => (
+                          <span key={index} className="text-yellow-500">
+                            ⭐
+                          </span>
+                        )
+                      )}
+                    </div>
+                    <h1 className="mt-2 text-lg text-left">
+                      {/* Increase the size of ₹465 */}
+                      <span className="text-black font-semibold">₹465</span>
+                      &nbsp;
+                      <span className="text-gray-500 text-sm">M.R.P</span>&nbsp;
+                      <span className="line-through text-gray-500 text-sm">
+                        ₹688
+                      </span>
+                      &nbsp;
+                      <span className="text-black text-sm">(34% Off)</span>
+                    </h1>
+                  </div>
                 </div>
               ))}
             </div>
@@ -249,18 +293,40 @@ const CategoryPage = () => {
               {mostgiftedForBooks.map((book) => (
                 <div
                   key={book.id}
-                  className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-between h-72"
+                  className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-between h-[24rem]"
                 >
-                  <img
-                    src={book.image}
-                    alt={book.title}
-                    className="h-40 w-38 object-cover mb-3"
-                  />
-                  <h3 className="text-lg">{book.title}</h3>
-                  <p className="text-gray-500 ">by {book.author}</p>
-                  <p className="text-yellow-500 font-bold mt-auto">
-                    ⭐ {book.rating}
-                  </p>
+                  <div className="mb-3">
+                    <img
+                      src={book.image}
+                      alt={book.title}
+                      className="h-52 w-42 object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-col items-start w-full ">
+                    <h3 className="text-lg">{book.title}</h3>
+                    <p className="text-gray-500">by {book.author}</p>
+                    <div className="flex mt-auto">
+                      {Array.from(
+                        { length: Math.round(book.rating) },
+                        (_, index) => (
+                          <span key={index} className="text-yellow-500">
+                            ⭐
+                          </span>
+                        )
+                      )}
+                    </div>
+                    <h1 className="mt-2 text-lg text-left">
+                      {/* Increase the size of ₹465 */}
+                      <span className="text-black font-semibold">₹465</span>
+                      &nbsp;
+                      <span className="text-gray-500 text-sm">M.R.P</span>&nbsp;
+                      <span className="line-through text-gray-500 text-sm">
+                        ₹688
+                      </span>
+                      &nbsp;
+                      <span className="text-black text-sm">(34% Off)</span>
+                    </h1>
+                  </div>
                 </div>
               ))}
             </div>
@@ -278,111 +344,201 @@ const CategoryPage = () => {
               {HotnewBooks.map((book) => (
                 <div
                   key={book.id}
-                  className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-between h-72"
+                  className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-between h-[24rem]"
                 >
-                  <img
-                    src={book.image}
-                    alt={book.title}
-                    className="h-40 w-38 object-cover mb-3"
-                  />
-                  <h3 className="text-lg">{book.title}</h3>
-                  <p className="text-gray-500 ">by {book.author}</p>
-                  <p className="text-yellow-500 font-bold mt-auto">
-                    ⭐ {book.rating}
-                  </p>
+                  <div className="mb-3">
+                    <img
+                      src={book.image}
+                      alt={book.title}
+                      className="h-52 w-42 object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-col items-start w-full ">
+                    <h3 className="text-lg">{book.title}</h3>
+                    <p className="text-gray-500">by {book.author}</p>
+                    <div className="flex mt-auto">
+                      {Array.from(
+                        { length: Math.round(book.rating) },
+                        (_, index) => (
+                          <span key={index} className="text-yellow-500">
+                            ⭐
+                          </span>
+                        )
+                      )}
+                    </div>
+                    <h1 className="mt-2 text-lg text-left">
+                      {/* Increase the size of ₹465 */}
+                      <span className="text-black font-semibold">₹465</span>
+                      &nbsp;
+                      <span className="text-gray-500 text-sm">M.R.P</span>&nbsp;
+                      <span className="line-through text-gray-500 text-sm">
+                        ₹688
+                      </span>
+                      &nbsp;
+                      <span className="text-black text-sm">(34% Off)</span>
+                    </h1>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
-      </div>
-      {/* featured  */}
-      <div className="p-4 md:p-8">
-        <h2 className="text-2xl font-semibold mb-6 text-center">
-          Featured Books
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {books.map((book) => (
-            <div
-              key={book.id}
-              className="bg-white shadow-lg rounded-lg p-4 flex flex-col items-center text-center"
-            >
-              <img
-                src={book.image}
-                alt={book.title}
-                className="h-48 w-32 object-cover mb-4"
-              />
-              <h3 className="text-lg font-semibold mb-2">{book.title}</h3>
-              <p className="text-gray-600 mb-2">by {book.author}</p>
-              <div className="flex items-center justify-center">
-                <p className="text-yellow-500 font-bold">⭐ {book.rating}</p>
-              </div>
-              <h1 className="flex items-center justify-center">PaperBags</h1>
-              <h1 className="flex items-center justify-center">Price:</h1>
-            </div>
-          ))}
-        </div>
-      </div>
+          {/* featured  */}
+          <div className="p-4 md:p-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {books.map((book) => (
+                <div
+                  key={book.id}
+                  className="bg-white shadow-lg rounded-lg p-4 flex flex-col text-left"
+                >
+                  {/* Adjusted image size */}
+                  <img
+                    src={book.image}
+                    alt={book.title}
+                    className="h-auto w-[90%] object-cover  mb-4" // Set fixed height and width for a smaller image size
+                  />
 
-      {/* featured 2 */}
-      <div className="p-4 md:p-8">
-        <h2 className="text-2xl font-semibold mb-6 text-center">
-          Featured Books
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {books.map((book) => (
-            <div
-              key={book.id}
-              className="bg-white shadow-lg rounded-lg p-4 flex flex-col items-center text-center"
-            >
-              <img
-                src={book.image}
-                alt={book.title}
-                className="h-48 w-32 object-cover mb-4"
-              />
-              <h3 className="text-lg font-semibold mb-2">{book.title}</h3>
-              <p className="text-gray-600 mb-2">by {book.author}</p>
-              <div className="flex items-center justify-center">
-                <p className="text-yellow-500 font-bold">⭐ {book.rating}</p>
-              </div>
-              <h1 className="flex items-center justify-center">PaperBags</h1>
-              <h1 className="flex items-center justify-center">Price:</h1>
-            </div>
-          ))}
-        </div>
-      </div>
+                  <h3 className="text-lg font-semibold mb-2">{book.title}</h3>
+                  <p className="text-gray-600 mb-2">by {book.author}</p>
 
-      <div className="p-2 md:p-4">
-        <h2 className="text-2xl font-semibold mb-6 text-center">
-          Featured Books
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-          {books.map((book) => (
-            <div
-              key={book.id}
-              className="bg-white  shadow-lg rounded-lg p-2 flex flex-col items-center text-center"
-            >
-              <img
-                src={book.image}
-                alt={book.title}
-                className="h-48 w-38 object-cover mb-4"
-              />
-              <h3 className="text-lg font-semibold mb-2">{book.title}</h3>
-              <p className="text-gray-600 mb-2">by {book.author}</p>
-              <div className="flex items-center justify-center">
-                <p className="text-yellow-500 font-bold">⭐ {book.rating}</p>
-              </div>
-              <h1 className="flex items-center justify-center">PaperBags</h1>
-              <h1 className="flex items-center justify-center">Price:</h1>
-            </div>
-          ))}
-        </div>
-      </div>
+                  <div className="flex items-center">
+                    {/* Render 4 stars horizontally */}
+                    {[...Array(4)].map((_, index) => (
+                      <span key={index} className="text-yellow-500">
+                        ⭐
+                      </span>
+                    ))}
+                  </div>
 
-      <div className="flex justify-center bg-gray-300 items-center p-4">
-        <span className="text-blue-600 text-lg md:text-xl lg:text-1xl cursor-pointer hover:underline">
-          See All Results
-        </span>
+                  {/* Paperback Text */}
+                  <h1 className="mt-4 text-blue-600 font-bold text-xl">
+                    Paperback
+                  </h1>
+
+                  {/* Price Section */}
+                  <h1 className="mt-2 text-lg">
+                    {/* Increase the size of ₹465 */}
+                    <span className="text-black text-2xl font-bold">
+                      ₹465
+                    </span>{" "}
+                    &nbsp;
+                    <span className="text-gray-500 text-sm">M.R.P</span> &nbsp;
+                    <span className="line-through text-gray-500 text-sm">
+                      ₹688
+                    </span>{" "}
+                    &nbsp;
+                    <span className="text-black text-sm">(34% Off)</span>
+                  </h1>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* featured  */}
+          <div className="p-4 md:p-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {books.map((book) => (
+                <div
+                  key={book.id}
+                  className="bg-white shadow-lg rounded-lg p-4 flex flex-col text-left"
+                >
+                  {/* Adjusted image size */}
+                  <img
+                    src={book.image}
+                    alt={book.title}
+                    className="h-auto w-[90%] object-cover  mb-4" // Set fixed height and width for a smaller image size
+                  />
+
+                  <h3 className="text-lg font-semibold mb-2">{book.title}</h3>
+                  <p className="text-gray-600 mb-2">by {book.author}</p>
+
+                  <div className="flex items-center">
+                    {/* Render 4 stars horizontally */}
+                    {[...Array(4)].map((_, index) => (
+                      <span key={index} className="text-yellow-500">
+                        ⭐
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Paperback Text */}
+                  <h1 className="mt-4 text-blue-600 font-bold text-xl">
+                    Paperback
+                  </h1>
+
+                  {/* Price Section */}
+                  <h1 className="mt-2 text-lg">
+                    {/* Increase the size of ₹465 */}
+                    <span className="text-black text-2xl font-bold">
+                      ₹465
+                    </span>{" "}
+                    &nbsp;
+                    <span className="text-gray-500 text-sm">M.R.P</span> &nbsp;
+                    <span className="line-through text-gray-500 text-sm">
+                      ₹688
+                    </span>{" "}
+                    &nbsp;
+                    <span className="text-black text-sm">(34% Off)</span>
+                  </h1>
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* featured  */}
+          <div className="p-4 md:p-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {books.map((book) => (
+                <div
+                  key={book.id}
+                  className="bg-white shadow-lg rounded-lg p-4 flex flex-col text-left"
+                >
+                  {/* Adjusted image size */}
+                  <img
+                    src={book.image}
+                    alt={book.title}
+                    className="h-auto w-[90%] object-cover  mb-4" // Set fixed height and width for a smaller image size
+                  />
+
+                  <h3 className="text-lg font-semibold mb-2">{book.title}</h3>
+                  <p className="text-gray-600 mb-2">by {book.author}</p>
+
+                  <div className="flex items-center">
+                    {/* Render 4 stars horizontally */}
+                    {[...Array(4)].map((_, index) => (
+                      <span key={index} className="text-yellow-500">
+                        ⭐
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Paperback Text */}
+                  <h1 className="mt-4 text-blue-600 font-bold text-xl">
+                    Paperback
+                  </h1>
+
+                  {/* Price Section */}
+                  <h1 className="mt-2 text-lg">
+                    {/* Increase the size of ₹465 */}
+                    <span className="text-black text-2xl font-bold">
+                      ₹465
+                    </span>{" "}
+                    &nbsp;
+                    <span className="text-gray-500 text-sm">M.R.P</span> &nbsp;
+                    <span className="line-through text-gray-500 text-sm">
+                      ₹688
+                    </span>{" "}
+                    &nbsp;
+                    <span className="text-black text-sm">(34% Off)</span>
+                  </h1>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="flex justify-center bg-gray-300 items-center p-4">
+            <span className="text-blue-600 text-lg md:text-xl lg:text-1xl cursor-pointer hover:underline">
+              See All Results
+            </span>
+          </div>
+        </div>
       </div>
 
       {/* text */}

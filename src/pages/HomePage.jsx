@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
-import { Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { genre, itemsData } from "../data/demoItem";
@@ -19,6 +18,7 @@ import { Link } from "react-router-dom";
 import categoryService from "../services/category.service";
 import LeftSidebar from "../components/LeftSidebar";
 import ImageRowSection from "./Categoryslider";
+import DetailPage from "./DetailPage";
 
 const HomePage = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -83,7 +83,10 @@ const HomePage = () => {
             >
               {itemsData.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <ItemCard image={item.imageUrl} title={item.title} />
+                  {" "}
+                  <Link to={`/detailsPage/${index}`}>
+                    <ItemCard image={item.imageUrl} title={item.title} />
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -184,8 +187,8 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className=" flex bg bg-[#fef8d8] ">
-            <div className=" w-56 h-auto  ">
+          <div className=" flex bg bg-green-800 ">
+            <div className=" w-56 h-auto   ">
               <img
                 className="text-black"
                 src="https://m.media-amazon.com/images/G/31/img21/Books/Aug2024/434x530_Exam-Books-rev._CB565488257_.png"
@@ -247,7 +250,36 @@ const HomePage = () => {
           </div>
         </div>
         <section className="w-full py-8 px-4  justify-center bg-[#fef8d8]">
-          <p className="font-bold text-2xl">Explore in your own Language</p>
+          <p className="font-bold mb-2 text-2xl">
+            Explore in your own Language
+          </p>
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <img
+                src="https://m.media-amazon.com/images/G/31/img21/Books/Jupiter2024/1500x300_Most-loved-in-hindi._CB562586212_.jpg"
+                alt=""
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://m.media-amazon.com/images/G/31/img21/Books/Jupiter2024/1500x300_International-bestsellers._CB562586212_.jpg"
+                alt=""
+              />
+            </SwiperSlide>
+          </Swiper>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12">
             {/* Repeating the round divs six times */}
@@ -265,12 +297,12 @@ const HomePage = () => {
         <div>
           <OfferCarousel />
         </div>
-        <span className="block text-center bg-gray-200 mt-4">
+        <span className="block text-center bg-gray-300 mt-4">
           <Link
             to="/categories/*"
             className="text-blue-600 hover:text-blue-800 underline  cursor-pointer transition-colors duration-300 ease-in-out"
           >
-            View More Deals
+            View All Categories....
           </Link>
         </span>
       </div>

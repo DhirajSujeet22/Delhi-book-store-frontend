@@ -1,7 +1,54 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import BooksCategory from "./BooksCategory";
 
 const LeftSidebar = () => {
+  const [dropdownStates, setDropdownStates] = useState({
+    dropdown1: false,
+    dropdown2: false,
+    dropdown3: false,
+    dropdown4: false,
+    // Add more dropdowns if necessary
+  });
+
+  console.log(dropdownStates);
+
+  // Function to toggle a particular dropdown
+  const toggleDropdown = (dropdownId) => {
+    setDropdownStates((prevState) => ({
+      ...prevState,
+      [dropdownId]: !prevState[dropdownId],
+    }));
+  };
+
+  const Action_Adventure = [
+    { name: "Fantasy", path: "/categories/action-adventure/fantasy" },
+    { name: "Sci-Fi", path: "/categories/action-adventure/scifi" },
+    { name: "Mystery", path: "/categories/action-adventure/mystery" },
+    { name: "Thriller", path: "/categories/action-adventure/thriller" },
+  ];
+
+  const Arts_Film_Photography = [
+    { name: "one", path: "#" },
+    { name: "Two", path: "#" },
+    { name: "Three", path: "#" },
+    { name: "Four", path: "#" },
+  ];
+
+  const Biographies_Diaries_Accounts = [
+    { name: "Account", path: "#" },
+    { name: "Bio", path: "#" },
+    { name: "Diary", path: "#" },
+    { name: "Four", path: "#" },
+  ];
+  const Children_Book = [
+    { name: "Book 1", path: "#" },
+    { name: "Book 2", path: "#" },
+    { name: "Book 3", path: "#" },
+    { name: "Book 4", path: "#" },
+  ];
+
   return (
     <>
       <div className=" lg:flex flex-col hidden col-span-2  pl-2  border-r border-solid h-full  ">
@@ -27,42 +74,55 @@ const LeftSidebar = () => {
         </div>
 
         <div className="p-2">
-  <h2 className="font-semibold mb-1">Indian Languages</h2>
-  <ul className="list-none text-[15px]">
-    <li className="flex items-center mb-2">
-      <input type="checkbox" className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded" />
-      <a href="#" className="text-black hover:text-red-500">
-        English
-      </a>
-    </li>
-    <li className="flex items-center mb-2">
-      <input type="checkbox" className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded" />
-      <a href="#" className="text-black hover:text-red-500">
-        Hindi
-      </a>
-    </li>
-    <li className="flex items-center mb-2">
-      <input type="checkbox" className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded" />
-      <a href="#" className="text-black hover:text-red-500">
-        Marathi
-      </a>
-    </li>
-    <li className="flex items-center mb-2">
-      <input type="checkbox" className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded" />
-      <a href="#" className="text-black hover:text-red-500">
-        Tamil
-      </a>
-      
-    </li>
-    <li className="flex items-center mb-2">
-      <input type="checkbox" className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded" />
-      <a href="#" className="text-black hover:text-red-500">
-       Telugu
-      </a>
-    </li>
-  </ul>
-</div>
-
+          <h2 className="font-semibold mb-1">Indian Languages</h2>
+          <ul className="list-none text-[15px]">
+            <li className="flex items-center mb-2">
+              <input
+                type="checkbox"
+                className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded"
+              />
+              <a href="#" className="text-black hover:text-red-500">
+                English
+              </a>
+            </li>
+            <li className="flex items-center mb-2">
+              <input
+                type="checkbox"
+                className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded"
+              />
+              <a href="#" className="text-black hover:text-red-500">
+                Hindi
+              </a>
+            </li>
+            <li className="flex items-center mb-2">
+              <input
+                type="checkbox"
+                className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded"
+              />
+              <a href="#" className="text-black hover:text-red-500">
+                Marathi
+              </a>
+            </li>
+            <li className="flex items-center mb-2">
+              <input
+                type="checkbox"
+                className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded"
+              />
+              <a href="#" className="text-black hover:text-red-500">
+                Tamil
+              </a>
+            </li>
+            <li className="flex items-center mb-2">
+              <input
+                type="checkbox"
+                className="mr-2 h-4 w-4 text-red-500 border-gray-300 rounded"
+              />
+              <a href="#" className="text-black hover:text-red-500">
+                Telugu
+              </a>
+            </li>
+          </ul>
+        </div>
 
         <div className=" pl-3 text-balance font-normal">
           <ul>
@@ -84,37 +144,111 @@ const LeftSidebar = () => {
                   <h3 className="text-sm pl-2 pt-1 font-semibold text-gray-800 mb-2">
                     Categories
                   </h3>
-                  <ul className="pl-7 pt-2 space-y-2 text-[15px]">
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      <Link to="/categories/action-adventure">
-                        Action & Adventure
-                      </Link>
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      <Link to="/categories/arts-film-photography">
-                        Arts, Film & Photography
-                      </Link>
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      <Link to="/categories/biographies-diaries-true-accounts">
-                        Biographies, Diaries & True Accounts
-                      </Link>
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      <Link to="/categories/business-economics">
-                        Business & Economics
-                      </Link>
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      <Link to="/categories/childrens-books">
-                        Children's Books
-                      </Link>
-                    </li>
-                    <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
-                      <Link to="/categories/comics-mangas">
-                        Comics & Mangas
-                      </Link>
-                    </li>
+                  <ul className="pl-2 pt-2 space-y-1 text-[15px]">
+                    <div className="relative">
+                      {/* Main list item with click event */}
+                      <li
+                        className="p-2 hover:bg-gray-100 cursor-pointer"
+                        onClick={() => toggleDropdown("dropdown1")}
+                      >
+                        <div className="flex items-center justify-between">
+                          <Link to="/categories/action-adventure">
+                            Action & Adventure
+                          </Link>
+                          <span className="ml-2 ">
+                            {dropdownStates.dropdown1 ? (
+                              <span style={{ fontSize: "12px" }}>▲</span>
+                            ) : (
+                              <spam style={{ fontSize: "12px" }}>▼</spam>
+                            )}
+                          </span>{" "}
+                          {/* Downward arrow icon */}
+                        </div>
+                      </li>
+
+                      {/* Space for subcategory, ensuring it doesn't overlap */}
+                      {dropdownStates.dropdown1 && (
+                        <BooksCategory Action_Adventure={Action_Adventure} />
+                      )}
+                    </div>
+                    <div className="relative">
+                      {/* Main list item with click event */}
+                      <li
+                        className="p-2 hover:bg-gray-100 cursor-pointer"
+                        onClick={() => toggleDropdown("dropdown2")}
+                      >
+                        <div className="flex items-center justify-between">
+                          <Link to="/categories/Arts-Film&-Photography">
+                            Arts, Film & Photography
+                          </Link>
+                          {dropdownStates.dropdown2 ? (
+                            <span style={{ fontSize: "12px" }}>▲</span>
+                          ) : (
+                            <spam style={{ fontSize: "12px" }}>▼</spam>
+                          )}
+                          {/* Downward arrow icon */}
+                        </div>
+                      </li>
+
+                      {/* Space for subcategory, ensuring it doesn't overlap */}
+                      {dropdownStates.dropdown2 && (
+                        <BooksCategory
+                          Arts_Film_Photography={Arts_Film_Photography}
+                        />
+                      )}
+                    </div>
+
+                    <div className="relative">
+                      {/* Main list item with click event */}
+                      <li
+                        className="p-2 hover:bg-gray-100 cursor-pointer"
+                        onClick={() => toggleDropdown("dropdown3")}
+                      >
+                        <div className="flex items-center justify-between">
+                          <Link to="/categories/Arts-Film&-Photography">
+                            Biographies, Diaries & True Accounts
+                          </Link>
+                          {dropdownStates.dropdown3 ? (
+                            <span style={{ fontSize: "12px" }}>▲</span>
+                          ) : (
+                            <spam style={{ fontSize: "12px" }}>▼</spam>
+                          )}
+                        </div>
+                      </li>
+
+                      {/* Space for subcategory, ensuring it doesn't overlap */}
+                      {dropdownStates.dropdown3 && (
+                        <BooksCategory
+                          Biographies_Diaries_Accounts={
+                            Biographies_Diaries_Accounts
+                          }
+                        />
+                      )}
+                    </div>
+
+                    <div className="relative">
+                      {/* Main list item with click event */}
+                      <li
+                        className="p-2 hover:bg-gray-100 cursor-pointer"
+                        onClick={() => toggleDropdown("dropdown4")}
+                      >
+                        <div className="flex items-center justify-between">
+                          <Link to="/categories/Arts-Film&-Photography">
+                            Children's Books
+                          </Link>
+                          {dropdownStates.dropdown4 ? (
+                            <span style={{ fontSize: "12px" }}>▲</span>
+                          ) : (
+                            <spam style={{ fontSize: "12px" }}>▼</spam>
+                          )}
+                        </div>
+                      </li>
+
+                      {/* Space for subcategory, ensuring it doesn't overlap */}
+                      {dropdownStates.dropdown4 && (
+                        <BooksCategory Children_Book={Children_Book} />
+                      )}
+                    </div>
                     <li className="p-[0rem] hover:bg-gray-100 cursor-pointer">
                       <Link to="/categories/computers-internet">
                         Computers & Internet

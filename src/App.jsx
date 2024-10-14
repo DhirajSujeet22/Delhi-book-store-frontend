@@ -7,6 +7,7 @@ import Homepage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import CategoryPage from "./pages/CategoryPage";
 import PageUp from "./components/common/PageUp";
+import DetailPage from "./pages/DetailPage";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -31,6 +32,16 @@ function App() {
               <>
                 <PageUp />
                 <CategoryPage />
+              </>
+            }
+          />
+
+          <Route
+            path="/detailsPage/:id"
+            element={
+              <>
+                <PageUp />
+                <DetailPage />
               </>
             }
           />
