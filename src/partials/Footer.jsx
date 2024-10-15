@@ -1,4 +1,6 @@
+
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const handleScroll = () => {
@@ -7,116 +9,203 @@ const Footer = () => {
 
   return (
     <footer>
+      {/* Back to top link */}
       <div
         className="back-option text-lg cursor-pointer"
         onClick={handleScroll}
       >
         Back to top
       </div>
-      <div className="footer-links pb-4 !h-full ">
-        <ul className="  ">
+
+      {/* Footer Links */}
+      <div className="footer-links pb-4 !h-full">
+        <ul>
           <p>Get to Know Us</p>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          <Link
+            to="/careers"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Careers
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/blog"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Blog
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/about"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             About DBS
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/investor-relations"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Investor Relations
-          </a>
+          </Link>
         </ul>
-        <ul className=" lg:block hidden">
+
+        <ul className="lg:block hidden">
           <p>Make Money with Us</p>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          <Link
+            to="/sell"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Sell products on DBS
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/sell-business"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Sell on DBS Business
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/sell-apps"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Sell apps on DBS
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/affiliate"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Become an Affiliate
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/self-publish"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Self-Publish with Us
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/host-hub"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Host an DBS Hub
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/more-money-options"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             ›See More Make Money with Us
-          </a>
+          </Link>
         </ul>
+
         <ul>
           <p>DBS Payment Products</p>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          <Link
+            to="/business-card"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             DBS Business Card
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/shop-points"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Shop with Points
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/reload-balance"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Reload Your Balance
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/currency-converter"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             DBS Currency Converter
-          </a>
+          </Link>
         </ul>
-        <ul className=" lg:block hidden">
+
+        <ul className="lg:block hidden">
           <p>Let Us Help You</p>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
-            DBS and COVID-19
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          <Link
+            to="./pages/Term_conditionPage"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
+            Terms &amp; Conditions
+          </Link>
+          <Link
+            to="/account"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Your Account
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/orders"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Your Orders
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="./pages/PolicyPage"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Shipping Rates &amp; Policies
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="./pages/ReturnPage"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Returns &amp; Replacements
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/manage-content"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Manage Your Content and Devices
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/assistant"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             DBS Assistant
-          </a>
-          <a className=" font-medium  lg:font-normal !text-base lg:!text-xs">
+          </Link>
+          <Link
+            to="/help"
+            className="font-medium lg:font-normal !text-base lg:!text-xs"
+          >
             Help
-          </a>
+          </Link>
         </ul>
       </div>
-      <div className="country-info h-full py-4 flex justify-around items-center mx-auto ">
+
+      {/* Country Info */}
+      <div className="country-info h-full py-4 flex justify-around items-center mx-auto">
         <div className="logo">
-          <img className=" !w-36 lg:!w-24  " src="/delhiBookStore-logo.png" />
+          <img
+            className="!w-36 lg:!w-24"
+            src="/delhiBookStore-logo.png"
+            alt="DBS logo"
+          />
         </div>
-        <div className="options h-full lg:!flex  !hidden ">
-          <select className=" h-full ">
+        <div className="options h-full lg:!flex !hidden">
+          <select className="h-full">
             <option value="En">English</option>
           </select>
-          <select className=" h-full ">
-            <option value={1}>$ USD - U.S. Dollar</option>
+          <select className="h-full">
+            <option value="1">$ USD - U.S. Dollar</option>
           </select>
-          <select className=" h-full ">
-            <option value={4}>United states</option>
+          <select className="h-full">
+            <option value="4">United States</option>
           </select>
         </div>
       </div>
+
+      {/* Policies */}
       <div className="policies text-xl lg:text-xs h-full py-4">
         <div className="pages">
-          <a href="">Conditions of Use</a>
-          <a href="">Privacy Notice</a>
-          <a href="">Your Ads Privacy Choices</a>
+          <Link to="/conditions-of-use" className="mr-4">
+            Conditions of Use
+          </Link>
+          <Link to="/privacy-notice" className="mr-4">
+            Privacy Notice
+          </Link>
+          <Link to="/ads-privacy">Your Ads Privacy Choices</Link>
         </div>
         © 1996-2023, DBS.com, Inc. or its affiliates
       </div>

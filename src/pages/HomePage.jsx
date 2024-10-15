@@ -52,10 +52,6 @@ const HomePage = () => {
 
   return (
     <>
-      {/* {left side bar menu} */}
-      {/* <LeftSidebar /> */}
-      {/* {left side bar menu} */}
-
       <div className=" col-span-12 lg:col-span-10  px-5 pb-4 ">
         <ImageRowSection />
         <div className=" flex flex-col py-4 ">
