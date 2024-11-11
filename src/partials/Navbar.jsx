@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Cart from "../pages/Cart";
 
 const Navbar = () => {
   return (
@@ -61,30 +62,42 @@ const Navbar = () => {
               <option value="lan">AR</option>
             </select>
           </div>
-          <div className="account-option">
-            <p className="top-text">Hello, sign in</p>
-            <select className="select-account">
-              <option value="Account">Account &amp; Lists</option>
-              <option value="Account">Account &amp; Lists</option>
-              <option value="Account">Account &amp; Lists</option>
-            </select>
-          </div>
-          <div className="order-option">
-            <p className="top-text">Returns</p>
-            <p className="bottom-text">&amp; Orders</p>
-          </div>
-          <div className="cart-option">
-            <div className="cart-logo">
-              <i className="fa-solid fa-cart-shopping" />
+          <Link to="/signin">
+            <div className="account-option">
+              <p className="top-text">Hello, sign in</p>
+              <select className="select-account">
+                <option value="Account">Account &amp; Lists</option>
+                <option value="Account">Account &amp; Lists</option>
+
+                <option value="Account">Orders</option>
+              </select>
             </div>
-            Cart
-          </div>
+          </Link>
+          <Link to="/wishlist">
+            <div className="order-option">
+              <i
+                className="fa-solid fa-heart"
+                style={{ fontSize: "20px", color: "white" }}
+              ></i>
+            </div>
+          </Link>
+          <Link to="/cart">
+            <div className="cart-option">
+              <div className="cart-logo">
+                <i className="fa-solid fa-cart-shopping" />
+              </div>
+              Cart
+            </div>
+          </Link>
         </div>
       </nav>
       <div className="nav-options text-xl lg:text-sm h-16 lg:h-8 ">
         <div className="all-logo">
-          <i className="fa-solid fa-bars" />
-          <p className="list">All</p>
+          
+            <i className="fa-solid fa-bars" />
+            <Link to={"/categories"}>
+            <p className="list">All</p>
+          </Link>
         </div>
         <div className="options   ">
           <p>Today's Deals</p>

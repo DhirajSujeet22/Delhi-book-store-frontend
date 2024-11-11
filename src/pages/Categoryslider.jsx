@@ -56,7 +56,7 @@ const ImageRowSection = () => {
         modules={[Navigation, Autoplay]}
         spaceBetween={15}
         slidesPerView={7} // Default number of slides visible
-        navigation
+        // navigation
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

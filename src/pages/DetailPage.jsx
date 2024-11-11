@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -17,12 +18,6 @@ const DetailPage = () => {
   ];
   const [imageUrl, setImageUrl] = useState(imageUrls[0]); // Default image URL
 
-
-  // const imageUrls = [
-  //   "https://m.media-amazon.com/images/I/418IsoIOFNL._SX342_SY445_.jpg",
-  //   "https://m.media-amazon.com/images/I/51pLL-xtd-L._AC_SF480,480_.jpg",
-  //   "https://m.media-amazon.com/images/I/418IsoIOFNL._SX342_SY445_.jpg",
-  // ];
   const items = [
     {
       imageUrl:
@@ -46,28 +41,13 @@ const DetailPage = () => {
     },
   ];
 
-  // const [imageUrl, setImageUrl] = useState(imageUrls[0]);
 
   console.log(imageUrl);
   return (
     <>
+    <div className="overflow-x-hidden">
       <div className="flex">
-        {/* <div className="basis-[25%]  bg-white ">
-          <div className=" w-full p-10">
-            <img src={imageUrl} className="h-[24rem] w-[22rem]" alt="book" />
-          </div>
-          <div className="flex">
-            {imageUrls.map((url) => (
-              <div className="cursor-pointer w-full p-6">
-                <img
-                  onMouseOver={() => setImageUrl(url)}
-                  src={url}
-                  alt="book"
-                />
-              </div>
-            ))}
-          </div>
-        </div> */}
+   
 
         <div className="basis-[25%] bg-white">
           <div className=" p-10 mb-10 h-[28rem] w-[25rem] ">
@@ -216,9 +196,11 @@ const DetailPage = () => {
             <p className="text-sm m-2 text-blue-600">Buying in bulk?</p>
             <div className="space-y-8">
               {/* Buy Now Button */}
+              <Link to={'/checkout'}>
               <button className="w-full rounded-lg bg-yellow-400 text-white py-2 rounded hover:bg-yellow-700 transition duration-300">
                 Buy Now
               </button>
+              </Link>
 
               {/* Add to Cart Button */}
               <button className="w-full rounded-lg bg-yellow-400 text-white py-2 rounded hover:bg-yellow-700  transition duration-300">
@@ -521,6 +503,7 @@ const DetailPage = () => {
             <CiSquareChevRight />
           </div>
         </div>
+      </div>
       </div>
     </>
   );

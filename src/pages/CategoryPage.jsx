@@ -1,6 +1,6 @@
 import React from "react";
 import LeftSidebar from "../components/LeftSidebar";
-
+import { Link } from "react-router-dom";
 const CategoryPage = () => {
   const highlyRatedBooks = [
     {
@@ -147,7 +147,7 @@ const CategoryPage = () => {
       id: 1,
       image:
         "https://m.media-amazon.com/images/I/71Zb3XmVHML._AC_UL480_QL65_.jpg",
-      title: "Sword of Destiny (Reissue)",
+      title: "Sword of Destiny ",
       author: "Andrzej Sapkowski",
       rating: 4.5,
     },
@@ -383,7 +383,7 @@ const CategoryPage = () => {
             </div>
           </div>
           {/* featured  */}
-          <div className="p-4 md:p-8">
+          <div className="p-3 md:p-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {books.map((book) => (
                 <div
@@ -410,14 +410,14 @@ const CategoryPage = () => {
                   </div>
 
                   {/* Paperback Text */}
-                  <h1 className="mt-4 text-blue-600 font-bold text-xl">
+                  <h1 className="mt-4 text-blue-600 font-semibold text-xl">
                     Paperback
                   </h1>
 
                   {/* Price Section */}
                   <h1 className="mt-2 text-lg">
                     {/* Increase the size of ₹465 */}
-                    <span className="text-black text-2xl font-bold">
+                    <span className="text-black text-2x2 font-semibold">
                       ₹465
                     </span>{" "}
                     &nbsp;
@@ -434,7 +434,7 @@ const CategoryPage = () => {
           </div>
 
           {/* featured  */}
-          <div className="p-4 md:p-8">
+          <div className="p-3 md:p-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {books.map((book) => (
                 <div
@@ -461,14 +461,14 @@ const CategoryPage = () => {
                   </div>
 
                   {/* Paperback Text */}
-                  <h1 className="mt-4 text-blue-600 font-bold text-xl">
+                  <h1 className="mt-4 text-blue-600 font-semibold text-xl">
                     Paperback
                   </h1>
 
                   {/* Price Section */}
                   <h1 className="mt-2 text-lg">
                     {/* Increase the size of ₹465 */}
-                    <span className="text-black text-2xl font-bold">
+                    <span className="text-black text-2x2 font-semibold">
                       ₹465
                     </span>{" "}
                     &nbsp;
@@ -484,7 +484,7 @@ const CategoryPage = () => {
             </div>
           </div>
           {/* featured  */}
-          <div className="p-4 md:p-8">
+          <div className="p-3 md:p-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {books.map((book) => (
                 <div
@@ -511,14 +511,14 @@ const CategoryPage = () => {
                   </div>
 
                   {/* Paperback Text */}
-                  <h1 className="mt-4 text-blue-600 font-bold text-xl">
+                  <h1 className="mt-4 text-blue-600 font-semibold text-xl">
                     Paperback
                   </h1>
 
                   {/* Price Section */}
                   <h1 className="mt-2 text-lg">
                     {/* Increase the size of ₹465 */}
-                    <span className="text-black text-2xl font-bold">
+                    <span className="text-black text-2x2 font-semibold">
                       ₹465
                     </span>{" "}
                     &nbsp;
@@ -533,10 +533,12 @@ const CategoryPage = () => {
               ))}
             </div>
           </div>
-          <div className="flex justify-center bg-gray-300 items-center p-4">
-            <span className="text-blue-600 text-lg md:text-xl lg:text-1xl cursor-pointer hover:underline">
+          <div className="flex justify-end  items-start p-4 w-full">
+            <Link to={'/'}>
+            <span className="text-white text-lg md:text-xl lg:text-1xl cursor-pointer hover:underline px-4 py-2 bg-yellow-400 rounded-lg hover:bg-yellow-600 transition duration-300">
               See All Results
             </span>
+            </Link>
           </div>
         </div>
       </div>

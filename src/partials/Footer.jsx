@@ -40,10 +40,10 @@ const Footer = () => {
             About DBS
           </Link>
           <Link
-            to="/investor-relations"
+            to="/faqs"
             className="font-medium lg:font-normal !text-base lg:!text-xs"
           >
-            Investor Relations
+            FAQs
           </Link>
         </ul>
 
@@ -124,31 +124,31 @@ const Footer = () => {
         <ul className="lg:block hidden">
           <p>Let Us Help You</p>
           <Link
-            to="./pages/Term_conditionPage"
+            to="/Term_condition"
             className="font-medium lg:font-normal !text-base lg:!text-xs"
           >
             Terms &amp; Conditions
           </Link>
           <Link
-            to="/account"
+            to="/myprofile"
             className="font-medium lg:font-normal !text-base lg:!text-xs"
           >
             Your Account
           </Link>
           <Link
-            to="/orders"
+            to="/myorders"
             className="font-medium lg:font-normal !text-base lg:!text-xs"
           >
             Your Orders
           </Link>
           <Link
-            to="./pages/PolicyPage"
+            to="/policy"
             className="font-medium lg:font-normal !text-base lg:!text-xs"
           >
             Shipping Rates &amp; Policies
           </Link>
           <Link
-            to="./pages/ReturnPage"
+            to="/returnPage"
             className="font-medium lg:font-normal !text-base lg:!text-xs"
           >
             Returns &amp; Replacements
@@ -160,10 +160,10 @@ const Footer = () => {
             Manage Your Content and Devices
           </Link>
           <Link
-            to="/assistant"
+            to="/contact-us"
             className="font-medium lg:font-normal !text-base lg:!text-xs"
           >
-            DBS Assistant
+            Contact Us
           </Link>
           <Link
             to="/help"

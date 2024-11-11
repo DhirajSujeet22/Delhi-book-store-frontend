@@ -101,10 +101,10 @@ export const SpotlightCarousel = () => {
         </SwiperSlide>
         {/* Add more slides as needed */}
       </Swiper>
-      <div className="swiper-button-prev custom-button bg-white btn-3-prev text-slate-500 h-12 w-12 -left-2  ">
+      <div className="swiper-button-prev custom-button btn-3-prev text-slate-500 h-12 w-12 -left-2  ">
         <CiSquareChevLeft />
       </div>
-      <div className="swiper-button-next custom-button bg-white btn-3-next text-slate-500 h-12 w-12 -right-2  ">
+      <div className="swiper-button-next custom-button btn-3-next text-slate-500 h-12 w-12 -right-2  ">
         <CiSquareChevRight />
       </div>
     </div>
@@ -221,10 +221,10 @@ export const OfferCarousel = () => {
         </SwiperSlide>
         {/* Add more slides as needed */}
       </Swiper>
-      <div className="swiper-button-prev custom-button bg-white btn-5-prev text-slate-500 h-12 w-12 -left-2  ">
+      <div className="swiper-button-prev custom-button  btn-5-prev text-slate-500 h-12 w-12 -left-2 ">
         <CiSquareChevLeft />
       </div>
-      <div className="swiper-button-next custom-button bg-white btn-5-next text-slate-500 h-12 w-12 -right-2  ">
+      <div className="swiper-button-next custom-button  btn-5-next text-slate-500 h-12 w-12 -right-2  ">
         <CiSquareChevRight />
       </div>
     </div>
