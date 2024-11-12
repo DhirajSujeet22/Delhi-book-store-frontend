@@ -104,7 +104,9 @@ const Navbar = () => {
           <p>Customer Service</p>
           <p>Registry</p>
           <p>Gift Cards</p>
+         
           <p> Sell</p>
+        
         </div>
       </div>
     </header>
